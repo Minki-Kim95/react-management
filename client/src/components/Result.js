@@ -29,27 +29,26 @@ const Batting = ({classes}) => {
   
   return (
     <>
+      <Paper className={classes.root}>
       <h1>배팅결과</h1>
-      <h2>총액: 21000</h2>
-
-      <Paper>
+      <h2>총액: 21000원</h2>
         <Table className={classes.table}>
           <TableHead>
             <TableRow>
               <TableCell>
-                <img src="https://placeimg.com/128/128/4"></img>
+                <img src="images/iphone.jpg"></img>
               </TableCell>
               <TableCell>
-                <img src="https://placeimg.com/128/128/5"></img>
+                <img src="images/brick.jpg"></img>
               </TableCell>
               <TableCell>
-                <img src="https://placeimg.com/128/128/6"></img>
+                <img src="images/nametag.jpg"></img>
               </TableCell>
               <TableCell>
-                <img src="https://placeimg.com/128/128/7"></img>
+                <img src="images/crunch.jpg"></img>
               </TableCell>
               <TableCell>
-                <img src="https://placeimg.com/128/128/8"></img>
+                <img src="images/bontu.jpg"></img>
               </TableCell>
             </TableRow>
           </TableHead>
@@ -62,11 +61,11 @@ const Batting = ({classes}) => {
               <TableCell>비닐봉지/힙커톤</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>3000</TableCell>
-              <TableCell>1000</TableCell>
-              <TableCell>2000</TableCell>
-              <TableCell>4000</TableCell>
-              <TableCell>11000</TableCell>
+              <TableCell>3000원</TableCell>
+              <TableCell>1000원</TableCell>
+              <TableCell>2000원</TableCell>
+              <TableCell>4000원</TableCell>
+              <TableCell>11000원</TableCell>
             </TableRow>
           </TableBody>
         </Table>

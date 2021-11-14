@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
 import TableHead from '@material-ui/core/TableHead';
@@ -28,35 +28,94 @@ const styles = (theme) => ({
       margin: theme.spacing(2),
     },
   });
-const Batting = ({classes}) => {
-  
+class App extends React.Component {
+
+    // state = {
+    //     gachas: "",
+    //     completed: 0,
+    //   };
+    
+    //   componentDidMount() {
+    //     this.timer = setInterval(this.progress, 20);
+    //     this.callApi()
+    //       .then((res) => this.setState({ gachas: res }))
+    //       .catch((err) => console.log(err));
+    //   }
+    
+    //   callApi = async () => {
+    //     const response = await fetch("/api/package");
+    //     const body = await response.json();
+    //     console.log('1');
+    //     console.log(body);
+    //     return body;
+    //   };
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //       error: null,
+    //       isLoaded: false,
+    //       items: []
+    //     };
+    //   }
+    
+    //   componentDidMount() {
+    //     fetch("/api/pakage")
+    //       .then(res => res.json())
+    //       .then(
+    //         (result) => {
+    //           this.setState({
+    //             isLoaded: true,
+    //             items: result.items
+    //           });
+    //         },
+    //         // 주의: 컴포넌트에 있는 실제 버그로 인해 발생한 예외를
+    //         // 놓치지 않고 처리하기 위해서는
+    //         // catch() 블록보다는 여기서 에러를 다뤄주는 게 중요합니다.
+    //         (error) => {
+    //           this.setState({
+    //             isLoaded: true,
+    //             error
+    //           });
+    //         }
+    //       )
+    //   }
+
+render() {
+// const Batting = ({classes}) => {
+    const { classes } = this.props;
+
+    // const { error, isLoaded, items } = this.state;
+    // if (error) {
+    //   return <div>Error: {error.message}</div>;
+    // } else if (!isLoaded) {
+    //   return <div>Loading...</div>;
+    // } else {
   return (
     <>
+      <Paper className={classes.root}>
       <h1>아이폰</h1>
-      <h2>현 총액: 15000 / 20000</h2>
-      <Paper>
         <Table className={classes.table}>
           <TableHead>
             <TableRow>
               <TableCell>
-                <img src="https://placeimg.com/128/128/4"></img>
+                <img src="images/iphone.jpg"></img>
               </TableCell>
               <TableCell>
-                <img src="https://placeimg.com/128/128/5"></img>
+                <img src="images/brick.jpg"></img>
               </TableCell>
               <TableCell>
-                <img src="https://placeimg.com/128/128/6"></img>
+                <img src="images/nametag.jpg"></img>
               </TableCell>
               <TableCell>
-                <img src="https://placeimg.com/128/128/7"></img>
+                <img src="images/crunch.jpg"></img>
               </TableCell>
               <TableCell>
-                <img src="https://placeimg.com/128/128/8"></img>
+                <img src="images/bontu.jpg"></img>
               </TableCell>
             </TableRow>
           </TableHead>
           {/* <TableBody>
-            {this.state.customers ? this.state.customers.map((c) => { return (<GachaList key={c.id} id={c.id} image={c.image} name={c.name} price={c.price} gender={c.gender} job={c.job} />)
+            {this.state.gachas ? this.state.gachas.map((c) => { return (<GachaList key={c.id} id={c.id} image={c.image} name={c.name} price={c.price} gender={c.gender} job={c.job} />)
             }) : 
             <TableRow>
             </TableRow>
@@ -75,8 +134,11 @@ const Batting = ({classes}) => {
           </TableBody>
         </Table>
       </Paper>
+ 
+
+      <Paper className={classes.root}>
       <h3>배팅현황</h3>
-      <Paper>
+      <h4>현 총액: 15000원 / 20000원</h4>
         <Table className={classes.table}>
           <TableHead>
             <TableRow>
@@ -184,6 +246,7 @@ const Batting = ({classes}) => {
       </Paper>
     </>
   );
+    // }
 };
-
-export default withStyles(styles)(Batting);
+}
+export default withStyles(styles)(App);
